@@ -1,0 +1,30 @@
+:root {
+    --bg-color: var(--tg-theme-bg-color, #ffffff);
+    --text-color: var(--tg-theme-text-color, #000000);
+    --button-color: var(--tg-theme-button-color, #3390ec);
+    --button-text: var(--tg-theme-button-text-color, #ffffff);
+}
+
+body {
+    margin: 0; padding: 0; background: var(--bg-color); color: var(--text-color);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    overflow: hidden; touch-action: none;
+}
+
+#game-container {
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    height: 100vh; gap: 10px;
+}
+
+#ui { width: 90%; display: flex; justify-content: space-between; align-items: center; font-weight: bold; }
+#gameCanvas { background: #000; border: 2px solid var(--button-color); border-radius: 8px; max-width: 95vw; max-height: 50vh; }
+
+#startBtn { padding: 10px 20px; background: var(--button-color); color: var(--button-text); border: none; border-radius: 6px; cursor: pointer; font-weight: bold; }
+
+#controls { display: flex; flex-direction: column; align-items: center; margin-top: 10px; }
+.row { display: flex; gap: 10px; margin: 5px; }
+#controls button {
+    width: 60px; height: 60px; font-size: 24px; border-radius: 50%; border: none;
+    background: var(--button-color); color: var(--button-text); opacity: 0.8;
+}
+#controls button:active { transform: scale(0.9); opacity: 1; }
